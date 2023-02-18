@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js pre 7</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .container {
+        margin: 10px auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      #movie-search {
+        width: 500px;
+        height: 35px;
+        color: gray;
+        border-radius: 5px;
+        border: none;
+        outline: 1px solid gray;
+      }
+      .blueshadow {
+        box-shadow: 0 0 10px 5px rgb(106, 106, 225);
+      }
+      .cross {
+        background-image: url(times.svg);
+        right: 30px;
+        top: 7px;
+        display: none;
+        background-repeat: no-repeat;
+        background-size: 20px;
+        width: 20px;
+        height: 20px;
+        position: relative;
+        cursor: pointer;
+      }
+      #search-btn {
+        cursor: pointer;
+        width: 500px;
+        height: 35px;
+        background-color: green;
+        color: white;
+        border: 1px solid green;
+        border-radius: 5px;
+        margin-left: 10px;
+      }
+      #search-btn:hover {
+        opacity: 0.8;
+        box-shadow: 0 0 5px 1px rgb(1, 18, 1);
+      }
+      #movie-details {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .modal {
+        width: 25%;
+        border-radius: 9px;
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      .titleH2 {
+        font-size: 19px;
+      }
+      .img {
+        border-radius: 9px;
+        display: inline-block;
+        box-shadow: 0 0 10px 5px black;
+        height: 400px;
+      }
+      .details-btn {
+        background-color: green;
+        color: white;
+        border: 1px solid green;
+        width: 300px;
+        border-radius: 10px;
+        height: 40px;
+        cursor: pointer;
+      }
+      .details-btn:hover {
+        opacity: 0.8;
+        box-shadow: 0 0 5px 1px rgb(1, 18, 1);
+      }
+      .blur {
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1;
+      }
+
+      .modalWindow {
+        width: 90%;
+        height: 90%;
+        background-color: whitesmoke;
+        border-radius: 4px;
+        position: absolute;
+        left: 5%;
+        top: 5%;
+        z-index: 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .bord {
+        width: 97%;
+        height: 95%;
+        border: 1px solid grey;
+        box-shadow: 0 0 1px 1px gray;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .image {
+        height: 96%;
+        width: 33%;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .styleImage {
+        width: 100%;
+        height: 100%;
+      }
+      .info {
+        height: 96%;
+        width: 65%;
+      }
+      .title {
+        background-color: rgb(167, 150, 150);
+        text-align: center;
+        font-weight: 500;
+        height: 60px;
+        border-radius: 4px;
+        padding-top: 20px;
+      }
+      .Rated-Year-Genre {
+        margin-top: 10px;
+        color: gray;
+        font-weight: 700;
+        font-size: 14px;
+      }
+      .plot {
+        color: gray;
+        font-weight: 450;
+        margin-top: 10px;
+        font-size: 16px;
+      }
+      .writer,
+      .directed,
+      .staring,
+      .boxOfice,
+      .awards,
+      .ratings {
+        font-size: 16px;
+        margin-top: 10px;
+      }
+      .spanWriter {
+        font-weight: 500;
+        color: gray;
+      }
+      .ratin {
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <input type="text" id="movie-search" placeholder="Write movie name" />
+      <div class="cross"></div>
+      <button id="search-btn">Search</button>
+    </div>
+    <div id="movie-details"></div>
+    <div class="forBlur"></div>
+    <script src="scriptp7.js"></script>
+  </body>
+</html>
